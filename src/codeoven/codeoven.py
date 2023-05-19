@@ -387,7 +387,7 @@ class Dough:
 
     def flag_finder(self, code:str):
         if "<gsl" in code:
-                self.flag_dict["gsl"] = "-lgsl"
+                self.flag_dict["gsl"] = "-I /opt/homebrew/opt/gsl/include -L /opt/homebrew/opt/gsl/lib -lgsl -lgslcblas"
 
 class ProcessRunner:
     def __init__(self):
